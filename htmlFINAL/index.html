@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Arte</title>
+  <link href="assets\style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body class="bg-dark text-light">
+  
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="gif-header" href="#"><img src="assets\img\logo.png" alt="GIF Regalo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse w-100" id="navbarNav">
+      <ul class="navbar-nav w-100 d-flex justify-content-around">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#carrito">Carrito</a></li>
+        <li class="nav-item"><a class="nav-link" href="#login">Quienes somos</a></li>
+        <li class="nav-item">
+         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="bg-image text-center text-white p-5" style="background-image: url('https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/12/14/657ae2d72fd2f.jpeg?resize=1920,871'); background-size: cover; background-position: center;">
+    <h1 class="display-4 fw-bold">Bienvenido a nuestra Tienda de Arte</h1>
+    <p class="lead">Compra las mejores obras desde la comodidad de tu hogar</p>
+  </header>
+
+  <main class="galeria">
+    <div class="obra">
+    <a href="https://es.wikipedia.org/wiki/Impresionismo" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg" alt="Obra 1">
+    <div class="texto-obra">
+      <h5 class="card-title">Impresión, sol naciente</h5>
+      <p class="card-text">Claude Monet — Óleo, 1872</p>
+      <p class="fw-bold">$120.000</p>
+      <button class="btn btn-primary">Agregar al carrito</button>
+    </div>
+     </a>
+    </div>
+    
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/El_nacimiento_de_Venus_(Botticelli)" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/1920px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg" alt="Obra 2">
+      <div class="texto-obra">
+            <h5 class="card-title">El nacimiento de Venus</h5>
+            <p class="card-text">Sandro Botticelli — Témpera, 1485</p>
+            <p class="fw-bold">$250.000</p>
+            <button class="btn btn-primary">Agregar al carrito</button>
+      </div>
+      </a> 
+    </div>
+
+    <div class="obra">
+        <a href="https://es.wikipedia.org/wiki/Francisco_de_Goya" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg/800px-Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg" alt="Obra 3">
+      <div class="texto-obra">
+            <h5 class="card-title">Saturno devorando a su hijo</h5>
+            <p class="card-text">Francisco de Goya — Óleo, 1820</p>
+            <p class="fw-bold">$300.000</p>
+            <button class="btn btn-primary">Agregar al carrito</button>
+      </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Galería de Arte — Todos los derechos reservados
+  </footer>
+
+  <!-- Modal Login/Registro -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+
+
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario de login -->
+        <form id="loginForm">
+        <div class="mb-3">
+          <label>Correo electrónico</label>
+          <input type="email" class="form-control" id="emailLogin">
+        </div>
+        <div class="mb-3">
+          <label>Contraseña</label>
+          <input type="password" class="form-control" id="passwordLogin">
+        </div>
+
+        <div id="mensajeErrorLogin" style="color:red; display:none; margin-bottom:10px;"></div>
+        <div id="mensajeExitoLogin" style="color:lightgreen; display:none; margin-top:10px;"></div>
+
+        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+      </form>
+
+        <!-- Formulario de registro (oculto por defecto) -->
+        <form id="registerForm" class="d-none mt-3">
+          <div class="mb-3">
+            <label>Nombre completo</label>
+            <input type="text" class="form-control" id="nombreRegister">
+          </div>
+          <div class="mb-3">
+            <label>Correo electrónico</label>
+            <input type="email" class="form-control" id="emailRegister">
+          </div>
+          <div class="mb-3">
+            <label>Contraseña</label>
+            <input type="password" class="form-control" id="passwordRegister">
+          </div>
+          <div class="mb-3">
+            <label>Confirmar contraseña</label>
+            <input type="password" class="form-control" id="confirmPasswordRegister">
+          </div>
+
+          <div id="mensajeErrorRegistro" style="color:red; display:none; margin-bottom:10px;"></div>
+          <div id="mensajeExitoRegistro" style="color:lightgreen; display:none; margin-top:10px;"></div>
+
+          <button type="submit" class="btn btn-success w-100">Registrarse</button>
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <span id="toggleForms" style="cursor:pointer; text-decoration: underline;">
+          ¿No tienes cuenta? Regístrate
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggleForms = document.getElementById('toggleForms');
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  const modalTitle = document.getElementById('loginModalLabel');
+
+  toggleForms.addEventListener('click', () => {
+    loginForm.classList.toggle('d-none');
+    registerForm.classList.toggle('d-none');
+
+    if (!loginForm.classList.contains('d-none')) {
+      modalTitle.textContent = 'Iniciar Sesión';
+      toggleForms.textContent = '¿No tienes cuenta? Regístrate';
+    } else {
+      modalTitle.textContent = 'Registrarse';
+      toggleForms.textContent = '¿Ya tienes cuenta? Inicia sesión';
+    }
+  });
+</script>
+
+<script src="assets\main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
