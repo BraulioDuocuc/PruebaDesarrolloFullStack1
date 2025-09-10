@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Arte - Parte 2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .obra {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .obra img {
+      width: 100%;
+      height: 500px; 
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .obra:hover img {
+      transform: scale(1.05);
+    }
+
+    .texto-obra {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .obra:hover .texto-obra {
+      opacity: 1;
+    }
+
+    .texto-obra h2 {
+      margin: 0 0 5px;
+      font-size: 1.5rem;
+    }
+
+    .texto-obra p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="galeria">
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" alt="Obra 4">
+        <div class="texto-obra">
+          <h2>Obra 4</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Obra 5">
+        <div class="texto-obra">
+          <h2>Obra 5</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Obra 6">
+        <div class="texto-obra">
+          <h2>Obra 5</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Obra 7">
+        <div class="texto-obra">
+          <h2>Obra 5</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Obra 8">
+        <div class="texto-obra">
+          <h2>Obra 5</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+    <div class="obra">
+      <a href="https://es.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg" alt="Obra 9">
+        <div class="texto-obra">
+          <h2>Obra 5</h2>
+          <p>Descripción corta de la obra, técnica y año.</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Galería de Arte — Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
